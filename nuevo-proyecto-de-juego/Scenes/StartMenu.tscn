@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccg11agv6nunh"]
+
+[ext_resource type="Texture2D" uid="uid://cekur35sfnl5x" path="res://Images/landscapetexture.png" id="1_iuoct"]
+[ext_resource type="Script" path="res://Scripts/StartMenu.gd" id="1_va2sh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n6u83"]
+bg_color = Color(0.536112, 0, 0.0986783, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l0esc"]
+bg_color = Color(0.537255, 0, 0.0980392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jokwp"]
+bg_color = Color(0.537255, 0, 0.0980392, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_va2sh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_iuoct")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -266.5
+offset_top = -192.5
+offset_right = 266.5
+offset_bottom = 192.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="btnPlay" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_n6u83")
+text = "JUGAR"
+
+[node name="btnOptions" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_l0esc")
+text = "OPCIONES
+"
+
+[node name="btnExit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_jokwp")
+text = "SALIR"
+
+[connection signal="pressed" from="VBoxContainer/btnPlay" to="." method="_on_btn_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/btnOptions" to="." method="_on_btn_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/btnExit" to="." method="_on_btn_exit_pressed"]
