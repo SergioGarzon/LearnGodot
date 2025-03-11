@@ -1,3 +1,20 @@
-[gd_scene format=3 uid="uid://ld7x6u8jst04"]
+[gd_scene load_steps=4 format=3 uid="uid://ld7x6u8jst04"]
 
-[node name="Escena2" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://dy4ipnopbxkf5" path="res://Images/tile_0000.png" id="1_f1bio"]
+[ext_resource type="Script" path="res://Scripts/playermovement.gd" id="1_hy1ns"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ucvr"]
+radius = 12.5331
+height = 32.7969
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(570, 290)
+scale = Vector2(3.28315, 2.932)
+script = ExtResource("1_hy1ns")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_f1bio")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.813602, 0.744953)
+shape = SubResource("CapsuleShape2D_6ucvr")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8i1qvnuxins2"]
+
+[ext_resource type="Texture2D" uid="uid://dfjr6irfjiau5" path="res://Images/wallpaper.png" id="1_b6yin"]
+[ext_resource type="Script" path="res://Scripts/StartMenu.gd" id="1_i6n17"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i6n17")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 1920.0
+offset_bottom = 963.0
+scale = Vector2(0.599784, 0.672283)
+texture = ExtResource("1_b6yin")
