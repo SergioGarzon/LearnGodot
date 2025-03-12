@@ -10,4 +10,4 @@
 
 ### Game Play
 
-<img src="/Images/Godot Logo.png" />
+<img src="/Images/game play.png" />
