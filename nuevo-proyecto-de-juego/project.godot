@@ -10,7 +10,11 @@ config_version=5
 
 [application]
 
-config/name="Nuevo Proyecto de Juego"
-run/main_scene="res://Scenes/escena_2.tscn"
+config/name="FirstGameGodot"
+run/main_scene="res://Scenes/escena_1.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://Images/icon.svg"
+config/icon="res://Images/Character/tile_0000.png"
+
+[display]
+
+mouse_cursor/custom_image="res://Images/UI/cursor_mouse.png"
